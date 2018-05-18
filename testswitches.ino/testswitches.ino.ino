@@ -123,60 +123,55 @@ void loop() {
   //    }
   //
   //  }
+//
+//        if (test == false)
+//        {
+//              if (digitalRead(SwitchCantiLeverB) == 0)
+//              {
+//                digitalWrite(cantiLeverB, HIGH);
+//              }
+//              if (digitalRead(SwitchCantiLeverB) == 1)
+//              {
+//                digitalWrite(cantiLeverB, LOW);
+//                test = true;
+//              }
+//  
+//        }
+
+
+
+
+
+
+
+
+
+
+
+
 
         if (test == false)
         {
-              if (digitalRead(SwitchCantiLeverB) == 0)
-              {
-                digitalWrite(cantiLeverB, HIGH);
-              }
-              if (digitalRead(SwitchCantiLeverB) == 1)
-              {
-                digitalWrite(cantiLeverB, LOW);
-                test = true;
-              }
-  
+        digitalWrite(cantiLeverB, HIGH);
+        if (digitalRead(SwitchCantiLeverB) == 1)
+        {
+          digitalWrite(cantiLeverB, LOW);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        if (test == false)
-//        {
-//        digitalWrite(cantiLeverB, HIGH);
-//        if (digitalRead(SwitchCantiLeverB) == 1)
-//        {
-//          digitalWrite(cantiLeverB, LOW);
-//        }
-//            digitalWrite(cantiLeverF, HIGH);
-//          if  (digitalRead(SwitchCantiLeverF) == 1)
-//          {
-//            digitalWrite(cantiLeverF,LOW);
-//          }
-//            if (digitalRead(switchHorConv) == LOW)
-//            {
-//              digitalWrite(horizontalConv, HIGH);
-//            }
-//            if (digitalRead(switchHorConv) == HIGH)
-//            {
-//              digitalWrite(horizontalConv, LOW);
-//            }
-//        digitalWrite(armVertUp, HIGH);
-//        if (digitalRead(switchVert) == HIGH)
-//        {
-//          digitalWrite(armVertUp, LOW);
-//          test = true;
-//        }
-//        }
+            if (digitalRead(switchHorConv) == LOW)
+            {
+              digitalWrite(horizontalConv, HIGH);
+            }
+            if (digitalRead(switchHorConv) == HIGH)
+            {
+              digitalWrite(horizontalConv, LOW);
+            }
+        digitalWrite(armVertUp, HIGH);
+        if (digitalRead(switchVert) == HIGH)
+        {
+          digitalWrite(armVertUp, LOW);
+          test = true;
+        }
+        }
 
 
 
