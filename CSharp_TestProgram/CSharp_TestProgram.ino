@@ -43,13 +43,18 @@ void loop() {
       if (digitalRead(switchHorConv) == HIGH)
       {
         digitalWrite(horizontalConv, LOW);
+        if (digitalRead(switchVert) == HIGH) {
+          test = true;
+        }
       }
       digitalWrite(armVertUp, HIGH);
       if (digitalRead(switchVert) == HIGH)
       {
         digitalWrite(armVertUp, LOW);
-        test = true;
-        IncomingByte = 0;
+        if (digitalRead(horizontalConv) == LOW)
+        {
+          test = true;
+        }
       }
     }
   }
