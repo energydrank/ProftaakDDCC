@@ -37,22 +37,31 @@
             this.btnRetrieve2Jsie = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.lblStockEmptyJsie = new System.Windows.Forms.Label();
+            this.chbEmptyBoxJsie = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lblStockRedJsie = new System.Windows.Forms.Label();
+            this.chbRedJsie = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblStockBlueJsie = new System.Windows.Forms.Label();
+            this.chbBlueBoxJsie = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblStockWhiteJsie = new System.Windows.Forms.Label();
-            this.tabDeliverJsie = new System.Windows.Forms.TabPage();
             this.chbWhiteBoxJsie = new System.Windows.Forms.CheckBox();
-            this.chbBlueBoxJsie = new System.Windows.Forms.CheckBox();
-            this.chbRedJsie = new System.Windows.Forms.CheckBox();
-            this.chbEmptyBoxJsie = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.tabDeliverJsie = new System.Windows.Forms.TabPage();
             this.btnDeliver2Jsie = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnZeroPosJsie = new System.Windows.Forms.Button();
             this.cmbComPortsJsie = new System.Windows.Forms.ComboBox();
+            this.btnZeroPosJsie = new System.Windows.Forms.Button();
+            this.btnA1Jsie = new System.Windows.Forms.Button();
+            this.btnB1Jsie = new System.Windows.Forms.Button();
+            this.btnC1Jsie = new System.Windows.Forms.Button();
+            this.btnA2Jsie = new System.Windows.Forms.Button();
+            this.btnA3Jsie = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnC2Jsie = new System.Windows.Forms.Button();
+            this.btnB3Jsie = new System.Windows.Forms.Button();
+            this.btnC3Jsie = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabMainMenuJsie.SuspendLayout();
             this.tabRetrieveJsie.SuspendLayout();
@@ -166,6 +175,17 @@
             this.lblStockEmptyJsie.Text = "In Stock/ Out of Stock";
             this.lblStockEmptyJsie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // chbEmptyBoxJsie
+            // 
+            this.chbEmptyBoxJsie.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chbEmptyBoxJsie.Location = new System.Drawing.Point(3, 3);
+            this.chbEmptyBoxJsie.Name = "chbEmptyBoxJsie";
+            this.chbEmptyBoxJsie.Size = new System.Drawing.Size(124, 48);
+            this.chbEmptyBoxJsie.TabIndex = 2;
+            this.chbEmptyBoxJsie.Text = "Empty Box";
+            this.chbEmptyBoxJsie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chbEmptyBoxJsie.UseVisualStyleBackColor = true;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
@@ -191,6 +211,17 @@
             this.lblStockRedJsie.Text = "In Stock/Out of Stock";
             this.lblStockRedJsie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // chbRedJsie
+            // 
+            this.chbRedJsie.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chbRedJsie.Location = new System.Drawing.Point(3, 3);
+            this.chbRedJsie.Name = "chbRedJsie";
+            this.chbRedJsie.Size = new System.Drawing.Size(124, 48);
+            this.chbRedJsie.TabIndex = 2;
+            this.chbRedJsie.Text = "Red";
+            this.chbRedJsie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chbRedJsie.UseVisualStyleBackColor = true;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -215,6 +246,17 @@
             this.lblStockBlueJsie.Text = "In Stock/Out of Stock";
             this.lblStockBlueJsie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // chbBlueBoxJsie
+            // 
+            this.chbBlueBoxJsie.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chbBlueBoxJsie.Location = new System.Drawing.Point(3, 3);
+            this.chbBlueBoxJsie.Name = "chbBlueBoxJsie";
+            this.chbBlueBoxJsie.Size = new System.Drawing.Size(124, 48);
+            this.chbBlueBoxJsie.TabIndex = 2;
+            this.chbBlueBoxJsie.Text = "Blue";
+            this.chbBlueBoxJsie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chbBlueBoxJsie.UseVisualStyleBackColor = true;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 5;
@@ -222,7 +264,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 2F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 3F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 4F));
             this.tableLayoutPanel1.Controls.Add(this.lblStockWhiteJsie, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.chbWhiteBoxJsie, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 23);
@@ -242,6 +284,17 @@
             this.lblStockWhiteJsie.Text = "in Stock/ Out stock";
             this.lblStockWhiteJsie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // chbWhiteBoxJsie
+            // 
+            this.chbWhiteBoxJsie.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chbWhiteBoxJsie.Location = new System.Drawing.Point(5, 3);
+            this.chbWhiteBoxJsie.Name = "chbWhiteBoxJsie";
+            this.chbWhiteBoxJsie.Size = new System.Drawing.Size(124, 48);
+            this.chbWhiteBoxJsie.TabIndex = 2;
+            this.chbWhiteBoxJsie.Text = "White";
+            this.chbWhiteBoxJsie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chbWhiteBoxJsie.UseVisualStyleBackColor = true;
+            // 
             // tabDeliverJsie
             // 
             this.tabDeliverJsie.Controls.Add(this.btnDeliver2Jsie);
@@ -254,49 +307,14 @@
             this.tabDeliverJsie.Text = "Deliver";
             this.tabDeliverJsie.UseVisualStyleBackColor = true;
             // 
-            // chbWhiteBoxJsie
+            // btnDeliver2Jsie
             // 
-            this.chbWhiteBoxJsie.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chbWhiteBoxJsie.Location = new System.Drawing.Point(5, 3);
-            this.chbWhiteBoxJsie.Name = "chbWhiteBoxJsie";
-            this.chbWhiteBoxJsie.Size = new System.Drawing.Size(124, 48);
-            this.chbWhiteBoxJsie.TabIndex = 2;
-            this.chbWhiteBoxJsie.Text = "White";
-            this.chbWhiteBoxJsie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chbWhiteBoxJsie.UseVisualStyleBackColor = true;
-            // 
-            // chbBlueBoxJsie
-            // 
-            this.chbBlueBoxJsie.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chbBlueBoxJsie.Location = new System.Drawing.Point(3, 3);
-            this.chbBlueBoxJsie.Name = "chbBlueBoxJsie";
-            this.chbBlueBoxJsie.Size = new System.Drawing.Size(124, 48);
-            this.chbBlueBoxJsie.TabIndex = 2;
-            this.chbBlueBoxJsie.Text = "Blue";
-            this.chbBlueBoxJsie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chbBlueBoxJsie.UseVisualStyleBackColor = true;
-            // 
-            // chbRedJsie
-            // 
-            this.chbRedJsie.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chbRedJsie.Location = new System.Drawing.Point(3, 3);
-            this.chbRedJsie.Name = "chbRedJsie";
-            this.chbRedJsie.Size = new System.Drawing.Size(124, 48);
-            this.chbRedJsie.TabIndex = 2;
-            this.chbRedJsie.Text = "Red";
-            this.chbRedJsie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chbRedJsie.UseVisualStyleBackColor = true;
-            // 
-            // chbEmptyBoxJsie
-            // 
-            this.chbEmptyBoxJsie.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chbEmptyBoxJsie.Location = new System.Drawing.Point(3, 3);
-            this.chbEmptyBoxJsie.Name = "chbEmptyBoxJsie";
-            this.chbEmptyBoxJsie.Size = new System.Drawing.Size(124, 48);
-            this.chbEmptyBoxJsie.TabIndex = 2;
-            this.chbEmptyBoxJsie.Text = "Empty Box";
-            this.chbEmptyBoxJsie.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chbEmptyBoxJsie.UseVisualStyleBackColor = true;
+            this.btnDeliver2Jsie.Location = new System.Drawing.Point(211, 162);
+            this.btnDeliver2Jsie.Name = "btnDeliver2Jsie";
+            this.btnDeliver2Jsie.Size = new System.Drawing.Size(84, 54);
+            this.btnDeliver2Jsie.TabIndex = 1;
+            this.btnDeliver2Jsie.Text = "Deliver";
+            this.btnDeliver2Jsie.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -308,17 +326,17 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Put the Box on the Conveyor Belt and Press the button";
             // 
-            // btnDeliver2Jsie
-            // 
-            this.btnDeliver2Jsie.Location = new System.Drawing.Point(211, 162);
-            this.btnDeliver2Jsie.Name = "btnDeliver2Jsie";
-            this.btnDeliver2Jsie.Size = new System.Drawing.Size(84, 54);
-            this.btnDeliver2Jsie.TabIndex = 1;
-            this.btnDeliver2Jsie.Text = "Deliver";
-            this.btnDeliver2Jsie.UseVisualStyleBackColor = true;
-            // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnC3Jsie);
+            this.tabPage1.Controls.Add(this.btnB3Jsie);
+            this.tabPage1.Controls.Add(this.btnC2Jsie);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.btnA3Jsie);
+            this.tabPage1.Controls.Add(this.btnA2Jsie);
+            this.tabPage1.Controls.Add(this.btnC1Jsie);
+            this.tabPage1.Controls.Add(this.btnB1Jsie);
+            this.tabPage1.Controls.Add(this.btnA1Jsie);
             this.tabPage1.Controls.Add(this.cmbComPortsJsie);
             this.tabPage1.Controls.Add(this.btnZeroPosJsie);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -328,6 +346,14 @@
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "Developer";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // cmbComPortsJsie
+            // 
+            this.cmbComPortsJsie.FormattingEnabled = true;
+            this.cmbComPortsJsie.Location = new System.Drawing.Point(396, 6);
+            this.cmbComPortsJsie.Name = "cmbComPortsJsie";
+            this.cmbComPortsJsie.Size = new System.Drawing.Size(121, 21);
+            this.cmbComPortsJsie.TabIndex = 1;
             // 
             // btnZeroPosJsie
             // 
@@ -339,13 +365,95 @@
             this.btnZeroPosJsie.UseVisualStyleBackColor = true;
             this.btnZeroPosJsie.Click += new System.EventHandler(this.btnZeroPosJsie_Click);
             // 
-            // cmbComPortsJsie
+            // btnA1Jsie
             // 
-            this.cmbComPortsJsie.FormattingEnabled = true;
-            this.cmbComPortsJsie.Location = new System.Drawing.Point(396, 6);
-            this.cmbComPortsJsie.Name = "cmbComPortsJsie";
-            this.cmbComPortsJsie.Size = new System.Drawing.Size(121, 21);
-            this.cmbComPortsJsie.TabIndex = 1;
+            this.btnA1Jsie.Location = new System.Drawing.Point(28, 95);
+            this.btnA1Jsie.Name = "btnA1Jsie";
+            this.btnA1Jsie.Size = new System.Drawing.Size(75, 51);
+            this.btnA1Jsie.TabIndex = 2;
+            this.btnA1Jsie.Text = "A1";
+            this.btnA1Jsie.UseVisualStyleBackColor = true;
+            this.btnA1Jsie.Click += new System.EventHandler(this.btnA1Jsie_Click);
+            // 
+            // btnB1Jsie
+            // 
+            this.btnB1Jsie.Location = new System.Drawing.Point(109, 95);
+            this.btnB1Jsie.Name = "btnB1Jsie";
+            this.btnB1Jsie.Size = new System.Drawing.Size(75, 51);
+            this.btnB1Jsie.TabIndex = 3;
+            this.btnB1Jsie.Text = "B1";
+            this.btnB1Jsie.UseVisualStyleBackColor = true;
+            this.btnB1Jsie.Click += new System.EventHandler(this.btnB1Jsie_Click);
+            // 
+            // btnC1Jsie
+            // 
+            this.btnC1Jsie.Location = new System.Drawing.Point(190, 95);
+            this.btnC1Jsie.Name = "btnC1Jsie";
+            this.btnC1Jsie.Size = new System.Drawing.Size(75, 51);
+            this.btnC1Jsie.TabIndex = 4;
+            this.btnC1Jsie.Text = "C1";
+            this.btnC1Jsie.UseVisualStyleBackColor = true;
+            this.btnC1Jsie.Click += new System.EventHandler(this.btnC1Jsie_Click);
+            // 
+            // btnA2Jsie
+            // 
+            this.btnA2Jsie.Location = new System.Drawing.Point(28, 152);
+            this.btnA2Jsie.Name = "btnA2Jsie";
+            this.btnA2Jsie.Size = new System.Drawing.Size(75, 51);
+            this.btnA2Jsie.TabIndex = 5;
+            this.btnA2Jsie.Text = "A2";
+            this.btnA2Jsie.UseVisualStyleBackColor = true;
+            this.btnA2Jsie.Click += new System.EventHandler(this.btnA2Jsie_Click);
+            // 
+            // btnA3Jsie
+            // 
+            this.btnA3Jsie.Location = new System.Drawing.Point(28, 209);
+            this.btnA3Jsie.Name = "btnA3Jsie";
+            this.btnA3Jsie.Size = new System.Drawing.Size(75, 50);
+            this.btnA3Jsie.TabIndex = 6;
+            this.btnA3Jsie.Text = "A3";
+            this.btnA3Jsie.UseVisualStyleBackColor = true;
+            this.btnA3Jsie.Click += new System.EventHandler(this.btnA3Jsie_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(110, 153);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 50);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "B2";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnC2Jsie
+            // 
+            this.btnC2Jsie.Location = new System.Drawing.Point(192, 153);
+            this.btnC2Jsie.Name = "btnC2Jsie";
+            this.btnC2Jsie.Size = new System.Drawing.Size(75, 50);
+            this.btnC2Jsie.TabIndex = 8;
+            this.btnC2Jsie.Text = "C2";
+            this.btnC2Jsie.UseVisualStyleBackColor = true;
+            this.btnC2Jsie.Click += new System.EventHandler(this.btnC2Jsie_Click);
+            // 
+            // btnB3Jsie
+            // 
+            this.btnB3Jsie.Location = new System.Drawing.Point(110, 210);
+            this.btnB3Jsie.Name = "btnB3Jsie";
+            this.btnB3Jsie.Size = new System.Drawing.Size(75, 49);
+            this.btnB3Jsie.TabIndex = 9;
+            this.btnB3Jsie.Text = "B3";
+            this.btnB3Jsie.UseVisualStyleBackColor = true;
+            this.btnB3Jsie.Click += new System.EventHandler(this.btnB3Jsie_Click);
+            // 
+            // btnC3Jsie
+            // 
+            this.btnC3Jsie.Location = new System.Drawing.Point(192, 210);
+            this.btnC3Jsie.Name = "btnC3Jsie";
+            this.btnC3Jsie.Size = new System.Drawing.Size(75, 49);
+            this.btnC3Jsie.TabIndex = 10;
+            this.btnC3Jsie.Text = "C3";
+            this.btnC3Jsie.UseVisualStyleBackColor = true;
+            this.btnC3Jsie.Click += new System.EventHandler(this.btnC3Jsie_Click);
             // 
             // Form1
             // 
@@ -398,6 +506,15 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnZeroPosJsie;
         private System.Windows.Forms.ComboBox cmbComPortsJsie;
+        private System.Windows.Forms.Button btnC3Jsie;
+        private System.Windows.Forms.Button btnB3Jsie;
+        private System.Windows.Forms.Button btnC2Jsie;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnA3Jsie;
+        private System.Windows.Forms.Button btnA2Jsie;
+        private System.Windows.Forms.Button btnC1Jsie;
+        private System.Windows.Forms.Button btnB1Jsie;
+        private System.Windows.Forms.Button btnA1Jsie;
     }
 }
 

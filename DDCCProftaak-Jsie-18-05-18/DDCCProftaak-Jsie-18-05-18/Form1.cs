@@ -20,6 +20,8 @@ namespace DDCCProftaak_Jsie_18_05_18
         string[] portsJsie;
         SerialPort portJsie;
         bool isConnected;
+        byte CommandNumberJsie = 0;
+
         public Form1()
         {
             InitializeComponent();
@@ -38,9 +40,14 @@ namespace DDCCProftaak_Jsie_18_05_18
 
         private void btnZeroPosJsie_Click(object sender, EventArgs e)
         {
+            CommandNumberJsie = 4;
             if (!isConnected)
             {
                 connectToArduino();
+            }
+            else
+            {
+                CommandNumberJsie = 0;
             }
 
         }
@@ -64,7 +71,7 @@ namespace DDCCProftaak_Jsie_18_05_18
             portJsie = new SerialPort("COM3");
             portJsie.Encoding = Encoding.ASCII;
             portJsie.Open();
-            portJsie.BaseStream.WriteByte(4);
+            portJsie.BaseStream.WriteByte(CommandNumberJsie);
             portJsie.BaseStream.Flush();
             System.Threading.Thread.Sleep(100);
             string ab = "";
@@ -73,6 +80,123 @@ namespace DDCCProftaak_Jsie_18_05_18
                 ab = portJsie.ReadExisting();
             }
             portJsie.Close();
+        }
+
+        private void btnA1Jsie_Click(object sender, EventArgs e)
+        {
+            CommandNumberJsie = 11;
+            if (!isConnected)
+            {
+                connectToArduino();
+            }
+            else
+            {
+                CommandNumberJsie = 0;
+            }
+        }
+
+        private void btnA2Jsie_Click(object sender, EventArgs e)
+        {
+            CommandNumberJsie = 12;
+            if (!isConnected)
+            {
+                connectToArduino();
+            }
+            else
+            {
+                CommandNumberJsie = 0;
+            }
+        }
+
+        private void btnA3Jsie_Click(object sender, EventArgs e)
+        {
+            CommandNumberJsie = 13;
+            if (!isConnected)
+            {
+                connectToArduino();
+            }
+            else
+            {
+                CommandNumberJsie = 0;
+            }
+        }
+
+        private void btnB1Jsie_Click(object sender, EventArgs e)
+        {
+            CommandNumberJsie = 21;
+            if (!isConnected)
+            {
+                connectToArduino();
+            }
+            else
+            {
+                CommandNumberJsie = 0;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CommandNumberJsie = 22;
+            if (!isConnected)
+            {
+                connectToArduino();
+            }
+            else
+            {
+                CommandNumberJsie = 0;
+            }
+        }
+
+        private void btnB3Jsie_Click(object sender, EventArgs e)
+        {
+            CommandNumberJsie = 23;
+            if (!isConnected)
+            {
+                connectToArduino();
+            }
+            else
+            {
+                CommandNumberJsie = 0;
+            }
+        }
+
+        private void btnC1Jsie_Click(object sender, EventArgs e)
+        {
+            CommandNumberJsie = 31;
+            if (!isConnected)
+            {
+                connectToArduino();
+            }
+            else
+            {
+                CommandNumberJsie = 0;
+            }
+        }
+
+        private void btnC2Jsie_Click(object sender, EventArgs e)
+        {
+            CommandNumberJsie = 32;
+            if (!isConnected)
+            {
+                connectToArduino();
+            }
+            else
+            {
+                CommandNumberJsie = 0;
+            }
+        }
+
+        private void btnC3Jsie_Click(object sender, EventArgs e)
+        {
+            CommandNumberJsie = 33;
+            if (!isConnected)
+            {
+                connectToArduino();
+            }
+            else
+            {
+                CommandNumberJsie = 0;
+            }
         }
     }
 }
