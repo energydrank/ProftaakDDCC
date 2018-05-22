@@ -53,62 +53,62 @@ void loop() {
   Serial.print("CantileverF = ");
   Serial.println(digitalRead(cantiLeverF));
 
-//  if (test == false)
-//  {
-//    if  (test2 == false)
-//    {
-//      digitalWrite(horizontalRack, HIGH);
-//      delay(2000);
-//      digitalWrite(horizontalRack, LOW);
-//
-//      digitalWrite(armVertDown, HIGH);
-//      delay(320);
-//      digitalWrite(armVertDown, LOW);
-//      test2 = true;
-//      test5 = true;
-//    }
-//    if (test5 == true) {
-//      if  (digitalRead(SwitchCantiLeverF) == LOW)
-//      {
-//        digitalWrite(cantiLeverF, HIGH);
-//      }
-//      if  (digitalRead(SwitchCantiLeverF) == HIGH)
-//      {
-//        digitalWrite(cantiLeverF, LOW);
-//        test4 = true;
-//        test5 = false;
-//      }
-//    }
-//    if (test4 == true) {
-//      if  (digitalRead(switchVert) == LOW)
-//      {
-//        digitalWrite(armVertUp, HIGH);
-//      }
-//      if (digitalRead(switchVert) == HIGH)
-//      {
-//        digitalWrite(armVertUp, LOW);
-//        digitalWrite(cantiLeverB, HIGH);
-//        test3 = true;
-//        test4 = false;
-//      }
-//    }
-//    if  (test3 == true)
-//    {
-//      if  (digitalRead(SwitchCantiLeverB) == 1)
-//      {
-//        digitalWrite(cantiLeverB, LOW);
-//      }
-//      if (digitalRead(switchHorConv) == LOW)
-//      {
-//        digitalWrite(horizontalConv, HIGH);
-//      }
-//      if (digitalRead(switchHorConv) == HIGH)
-//      {
-//        digitalWrite(horizontalConv, LOW);
-//        test = true;
-//      }
-//    }
-//  }
+  //  if (test == false)
+  //  {
+  //    if  (test2 == false)
+  //    {
+  //      digitalWrite(horizontalRack, HIGH);
+  //      delay(2000);
+  //      digitalWrite(horizontalRack, LOW);
+  //
+  //      digitalWrite(armVertDown, HIGH);
+  //      delay(320);
+  //      digitalWrite(armVertDown, LOW);
+  //      test2 = true;
+  //      test5 = true;
+  //    }
+  //    if (test5 == true) {
+  //      if  (digitalRead(SwitchCantiLeverF) == LOW)
+  //      {
+  //        digitalWrite(cantiLeverF, HIGH);
+  //      }
+  //      if  (digitalRead(SwitchCantiLeverF) == HIGH)
+  //      {
+  //        digitalWrite(cantiLeverF, LOW);
+  //        test4 = true;
+  //        test5 = false;
+  //      }
+  //    }
+  //    if (test4 == true) {
+  //      if  (digitalRead(switchVert) == LOW)
+  //      {
+  //        digitalWrite(armVertUp, HIGH);
+  //      }
+  //      if (digitalRead(switchVert) == HIGH)
+  //      {
+  //        digitalWrite(armVertUp, LOW);
+  //        digitalWrite(cantiLeverB, HIGH);
+  //        test3 = true;
+  //        test4 = false;
+  //      }
+  //    }
+  //    if  (test3 == true)
+  //    {
+  //      if  (digitalRead(SwitchCantiLeverB) == 1)
+  //      {
+  //        digitalWrite(cantiLeverB, LOW);
+  //      }
+  //      if (digitalRead(switchHorConv) == LOW)
+  //      {
+  //        digitalWrite(horizontalConv, HIGH);
+  //      }
+  //      if (digitalRead(switchHorConv) == HIGH)
+  //      {
+  //        digitalWrite(horizontalConv, LOW);
+  //        test = true;
+  //      }
+  //    }
+  //  }
 
 
 
@@ -123,20 +123,20 @@ void loop() {
   //    }
   //
   //  }
-//
-//        if (test == false)
-//        {
-//              if (digitalRead(SwitchCantiLeverB) == 0)
-//              {
-//                digitalWrite(cantiLeverB, HIGH);
-//              }
-//              if (digitalRead(SwitchCantiLeverB) == 1)
-//              {
-//                digitalWrite(cantiLeverB, LOW);
-//                test = true;
-//              }
-//  
-//        }
+  //
+  //        if (test == false)
+  //        {
+  //              if (digitalRead(SwitchCantiLeverB) == 0)
+  //              {
+  //                digitalWrite(cantiLeverB, HIGH);
+  //              }
+  //              if (digitalRead(SwitchCantiLeverB) == 1)
+  //              {
+  //                digitalWrite(cantiLeverB, LOW);
+  //                test = true;
+  //              }
+  //
+  //        }
 
 
 
@@ -150,28 +150,39 @@ void loop() {
 
 
 
-        if (test == false)
-        {
-        digitalWrite(cantiLeverB, HIGH);
-        if (digitalRead(SwitchCantiLeverB) == 1)
-        {
-          digitalWrite(cantiLeverB, LOW);
-        }
-            if (digitalRead(switchHorConv) == LOW)
-            {
-              digitalWrite(horizontalConv, HIGH);
-            }
-            if (digitalRead(switchHorConv) == HIGH)
-            {
-              digitalWrite(horizontalConv, LOW);
-            }
-        digitalWrite(armVertUp, HIGH);
-        if (digitalRead(switchVert) == HIGH)
-        {
-          digitalWrite(armVertUp, LOW);
-          test = true;
-        }
-        }
+//  if (test == false)
+//  {
+//    digitalWrite(cantiLeverB, HIGH);
+//    if (digitalRead(SwitchCantiLeverB) == 1)
+//    {
+//      digitalWrite(cantiLeverB, LOW);
+//    }
+//    if (digitalRead(switchHorConv) == LOW)
+//    {
+//      digitalWrite(horizontalConv, HIGH);
+//    }
+//    if (digitalRead(switchHorConv) == HIGH)
+//    {
+//      digitalWrite(horizontalConv, LOW);
+//    }
+//    digitalWrite(armVertUp, HIGH);
+//    if (digitalRead(switchVert) == HIGH)
+//    {
+//      digitalWrite(armVertUp, LOW);
+//      test = true;
+//    }
+//  }
+
+
+  if (test == false)
+  {
+    digitalWrite(armVertUp, HIGH);
+    if (digitalRead(switchVert) == HIGH)
+    {
+      digitalWrite(armVertUp, LOW);
+      test = true;
+    }
+  }
 
 
 
