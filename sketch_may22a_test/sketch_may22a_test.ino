@@ -25,16 +25,9 @@ int encoderHorImp2 = A7;
 int encoderVertImp1 = A8;
 int encoderVertImp2 = A9;
 int armVertUp = 7;
-<<<<<<< HEAD
-int switchVert = A3;
-bool test = false;
-int IncomingByte = 0;
-int horizontalRack = 4;
-int armVertDown = 6;
-=======
 int armVertDown = 6;
 
-int IncomingByte = 11;
+int IncomingByte = 0;
 int IncomingByteLastState = 0;
 
 //Variables to read Encoder values
@@ -71,7 +64,6 @@ int iCounterVertical = 0;
 int iEncoderCounterHorizontal = 0;
 int iEncoderCounterVertical = 0;
 int iEncoderCounterVertical2 = 0;
->>>>>>> develop
 
 int iDelayTime = 0;
 int aHorizontalArray[] =  {0, 910, 1630, 2350};
@@ -79,15 +71,10 @@ int aVerticalArray[] = {0, -100, -530, -1050};
 
 void setup() {
   // put your setup code here, to run once:
-<<<<<<< HEAD
-  Serial.begin(250000);
-  pinMode(SwitchCantiLeverB, INPUT);
-=======
   pinMode(horizontalConv, INPUT);
   pinMode(horizontalRack, INPUT);
   pinMode(switchCantiLeverF, INPUT);
   pinMode(switchCantiLeverB, INPUT);
->>>>>>> develop
   pinMode(switchHorConv, INPUT);
   pinMode(switchVert, INPUT);
   pinMode(cantiLeverB, OUTPUT);
@@ -105,7 +92,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   //Serial.println(Serial.read() + (String)"abhd");
-
+  IncomingByte = Serial.read();
   //  Checks if incomingbyte is set
   if (IncomingByte != -1 && IncomingByte != 0 && IncomingByte != 4) {
     //saves the state of the incoming byte so it can read both values
@@ -135,13 +122,8 @@ void zeroPosition() {
     digitalWrite(cantiLeverB, LOW);
     if (digitalRead(switchHorConv) == HIGH)
     {
-<<<<<<< HEAD
-      digitalWrite(cantiLeverB, HIGH);
-      if (digitalRead(SwitchCantiLeverB) == HIGH)
-=======
       digitalWrite(horizontalConv, LOW);
       if (digitalRead(switchVert) == HIGH)
->>>>>>> develop
       {
         digitalWrite(armVertUp, LOW);
         if (digitalRead(switchHorConv) == HIGH && digitalRead(switchVert) == HIGH && digitalRead(switchCantiLeverB) == HIGH)
@@ -156,10 +138,6 @@ void zeroPosition() {
           xRetrievalVerticalDownAlign = true;
         }
       }
-<<<<<<< HEAD
-      digitalWrite(horizontalConv, HIGH);
-      if (digitalRead(switchHorConv) == HIGH)
-=======
       else
       {
         digitalWrite(armVertUp, HIGH);
@@ -186,7 +164,6 @@ void retrievalProcess() {
     encoder_B = digitalRead(encoderHorImp1);
     if ((!encoder_A) && (encoder_A_prev)) {
       if (iEncoderCounterHorizontal >= iCounterHorizontal)
->>>>>>> develop
       {
         digitalWrite(horizontalRack, LOW);
         xRetrievalHorizontalConvAlign = false;
@@ -361,11 +338,6 @@ void retrievalProcess() {
       xConveyerBeltExecution = true;
     }
   }
-<<<<<<< HEAD
-
-//    digitalWrite(horizontalRack, HIGH);
-}
-=======
   if (xConveyerBeltExecution == true)
   {
     if (digitalRead(lightBarrierInside) == LOW)
@@ -381,4 +353,3 @@ void retrievalProcess() {
   }
 }
 
->>>>>>> develop
