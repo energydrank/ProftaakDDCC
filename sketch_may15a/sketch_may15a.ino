@@ -36,6 +36,7 @@ bool test4 = false;
 bool test5 = false;
 bool test6 = false;
 bool test7 = false;
+bool test8 = false;
 
 void setup() {
   // put your setup code here, to run once:
@@ -95,103 +96,137 @@ void loop() {
   // get the current elapsed time
   // Other processing can be done here
 
-//  if (test == false)
-//  {
-//    if  (test2 == true)
-//    {
-//      digitalWrite(horizontalRack, HIGH);
-//      encoder_A = digitalRead(encoderHorImp2);    // Read encoder pins
-//      encoder_B = digitalRead(encoderHorImp1);
-//      if ((!encoder_A) && (encoder_A_prev)) {
-//        // A has gone from high to low
-//        if (counter >= 110)
-//        {
-//          digitalWrite(horizontalRack, LOW);
-//          test2 = false;
-//          test7 = true;
-//        }
-//        if (encoder_B) {
-//          counter++;
-//          Serial.println(counter);
-//        }
-//        else {
-//          counter--;
-//          Serial.println(counter);
-//        }
-//
-//      }
-//      encoder_A_prev = encoder_A;     // Store value of A for next time
-//    }
-//  }
-//  if (test7 == true) {
-//    digitalWrite(armVertDown, HIGH);
-//    encoder_AVert = digitalRead(encoderVertImp2);    // Read encoder pins
-//    encoder_BVert = digitalRead(encoderVertImp2);
-//    if ((!encoder_AVert) && (encoder_AVert_prev)) {
-//      // A has gone from high to low
-//      if (counterVert >= 20)
-//      {
-//        digitalWrite(armVertDown, LOW);
-//        test7 = false;
-//        test5 = true;
-//      }
-//      if (encoder_BVert) {
-//        counterVert++;
-//        Serial.println(counterVert);
-//      }
-//      else {
-//        counterVert--;
-//        Serial.println(counterVert);
-//      }
-//
-//    }
-//    encoder_AVert_prev = encoder_AVert;     // Store value of A for next time
-//  }
-//  if (test5 == true) {
-//    if  (digitalRead(SwitchCantiLeverF) == LOW)
-//    {
-//      digitalWrite(cantiLeverF, HIGH);
-//    }
-//    if  (digitalRead(SwitchCantiLeverF) == HIGH)
-//    {
-//      digitalWrite(cantiLeverF, LOW);
-//      test4 = true;
-//      test5 = false;
-//    }
-//  }
-//  if (test4 == true) {
-//    if  (digitalRead(switchVert) == LOW)
-//    {
-//      digitalWrite(armVertUp, HIGH);
-//    }
-//    if (digitalRead(switchVert) == HIGH)
-//    {
-//      digitalWrite(armVertUp, LOW);
-//      digitalWrite(cantiLeverB, HIGH);
-//      test3 = true;
-//      test4 = false;
-//    }
-//  }
-//  if  (test3 == true)
-//  {
-//    if  (digitalRead(SwitchCantiLeverB) == 1)
-//    {
-//      digitalWrite(cantiLeverB, LOW);
-//      test6 = true;
-//    }
-//    if (test6 == true)
-//    {
-//      if (digitalRead(switchHorConv) == LOW)
-//      {
-//        digitalWrite(horizontalConv, HIGH);
-//      }
-//      if (digitalRead(switchHorConv) == HIGH)
-//      {
-//        digitalWrite(horizontalConv, LOW);
-//        test = true;
-//      }
-//    }
-//  }
-//}
-//
+  if (test == false)
+  {
+    if  (test2 == true)
+    {
+      digitalWrite(horizontalRack, HIGH);
+      encoder_A = digitalRead(encoderHorImp2);    // Read encoder pins
+      encoder_B = digitalRead(encoderHorImp1);
+      if ((!encoder_A) && (encoder_A_prev)) {
+        // A has gone from high to low
+        if (counter >= 900)
+        {
+          digitalWrite(horizontalRack, LOW);
+          test2 = false;
+          test7 = true;
+          counter = 0;
+        }
+        if (encoder_B) {
+          counter++;
+          Serial.println(counter);
+        }
+        else {
+          counter--;
+          Serial.println(counter);
+        }
+
+      }
+      encoder_A_prev = encoder_A;     // Store value of A for next time
+    }
+  }
+  if (test7 == true) {
+    digitalWrite(armVertDown, HIGH);
+    encoder_AVert = digitalRead(encoderVertImp2);    // Read encoder pins
+    encoder_BVert = digitalRead(encoderVertImp2);
+    if ((!encoder_AVert) && (encoder_AVert_prev)) {
+      // A has gone from high to low
+      if (counterVert <= -185)
+      {
+        digitalWrite(armVertDown, LOW);
+        test7 = false;
+        test5 = true;
+      }
+      if (encoder_BVert) {
+        counterVert++;
+        Serial.println(counterVert);
+      }
+      else {
+        counterVert--;
+        Serial.println(counterVert);
+      }
+
+    }
+    encoder_AVert_prev = encoder_AVert;     // Store value of A for next time
+  }
+  if (test5 == true) {
+    if  (digitalRead(SwitchCantiLeverF) == LOW)
+    {
+      digitalWrite(cantiLeverF, HIGH);
+    }
+    if  (digitalRead(SwitchCantiLeverF) == HIGH)
+    {
+      digitalWrite(cantiLeverF, LOW);
+      test4 = true;
+      test5 = false;
+    }
+  }
+  if (test4 == true) {
+    if  (digitalRead(switchVert) == LOW)
+    {
+      digitalWrite(armVertUp, HIGH);
+    }
+    if (digitalRead(switchVert) == HIGH)
+    {
+      digitalWrite(armVertUp, LOW);
+      digitalWrite(cantiLeverB, HIGH);
+      test3 = true;
+      test4 = false;
+    }
+  }
+  if  (test3 == true)
+  {
+    if  (digitalRead(SwitchCantiLeverB) == 1)
+    {
+      digitalWrite(cantiLeverB, LOW);
+      test6 = true;
+    }
+    if (test6 == true)
+    {
+      if (digitalRead(switchHorConv) == LOW)
+      {
+        digitalWrite(horizontalConv, HIGH);
+      }
+      if (digitalRead(switchHorConv) == HIGH)
+      {
+        digitalWrite(horizontalConv, LOW);
+        test6 = false;
+        test8 = true;
+      }
+    }
+  }
+  if  (test8 == true)
+  {
+    if  (digitalRead(SwitchCantiLeverF) == LOW)
+    {
+      digitalWrite(cantiLeverF, HIGH);
+    }
+    if  (digitalRead(SwitchCantiLeverF) == HIGH)
+    {
+      digitalWrite(cantiLeverF, LOW);
+      digitalWrite(armVertDown, HIGH);
+      encoder_AVert = digitalRead(encoderVertImp2);    // Read encoder pins
+      encoder_BVert = digitalRead(encoderVertImp2);
+      if ((!encoder_AVert) && (encoder_AVert_prev)) {
+        // A has gone from high to low
+        if (counterVert <= -600)
+        {
+          digitalWrite(armVertDown, LOW);
+          test8 = false;
+          test = true;
+          counterVert = 0;
+        }
+        if (encoder_BVert) {
+          counterVert++;
+          Serial.println(counterVert);
+        }
+        else {
+          counterVert--;
+          Serial.println(counterVert);
+        }
+
+      }
+    }
+  }
+}
 

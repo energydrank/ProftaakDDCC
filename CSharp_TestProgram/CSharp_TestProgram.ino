@@ -1,5 +1,3 @@
-#include <SPI.h>
-#include <Controllino.h>
 
 int SwitchCantiLeverB = A11;
 int cantiLeverB = 9;
@@ -15,8 +13,7 @@ int horizontalRack = 4;
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(115200);
-  pinMode(horizontalRack, OUTPUT);
+  Serial.begin(9600);
   pinMode(SwitchCantiLeverB, INPUT);
   pinMode(switchHorConv, INPUT);
   pinMode(cantiLeverB, OUTPUT);
@@ -76,3 +73,6 @@ void loop() {
   }
 }
 
+
+  Serial.begin(115200);
+  pinMode(horizontalRack, OUTPUT);

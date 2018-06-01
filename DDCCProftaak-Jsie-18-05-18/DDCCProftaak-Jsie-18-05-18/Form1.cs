@@ -75,19 +75,17 @@ namespace DDCCProftaak_Jsie_18_05_18
             portJsie.BaseStream.Flush();
             System.Threading.Thread.Sleep(100);
             string ab = "";
-            while(1==1){
-                System.Diagnostics.Debug.Write(ab);
-                ab = portJsie.ReadExisting();
-            }
+            isConnected = false;
             portJsie.Close();
-        }
+            }
 
         private void btnA1Jsie_Click(object sender, EventArgs e)
         {
             CommandNumberJsie = 11;
-            if (!isConnected)
+            if (isConnected)
             {
                 connectToArduino();
+                CommandNumberJsie = 0;
             }
             else
             {
@@ -101,6 +99,7 @@ namespace DDCCProftaak_Jsie_18_05_18
             if (!isConnected)
             {
                 connectToArduino();
+                CommandNumberJsie = 0;
             }
             else
             {
@@ -114,6 +113,7 @@ namespace DDCCProftaak_Jsie_18_05_18
             if (!isConnected)
             {
                 connectToArduino();
+                CommandNumberJsie = 0;
             }
             else
             {
@@ -127,6 +127,7 @@ namespace DDCCProftaak_Jsie_18_05_18
             if (!isConnected)
             {
                 connectToArduino();
+                CommandNumberJsie = 0;
             }
             else
             {
@@ -140,6 +141,7 @@ namespace DDCCProftaak_Jsie_18_05_18
             if (!isConnected)
             {
                 connectToArduino();
+                CommandNumberJsie = 0;
             }
             else
             {
@@ -153,6 +155,7 @@ namespace DDCCProftaak_Jsie_18_05_18
             if (!isConnected)
             {
                 connectToArduino();
+                CommandNumberJsie = 0;
             }
             else
             {
@@ -166,6 +169,7 @@ namespace DDCCProftaak_Jsie_18_05_18
             if (!isConnected)
             {
                 connectToArduino();
+                CommandNumberJsie = 0;
             }
             else
             {
@@ -179,6 +183,7 @@ namespace DDCCProftaak_Jsie_18_05_18
             if (!isConnected)
             {
                 connectToArduino();
+                CommandNumberJsie = 0;
             }
             else
             {
@@ -192,6 +197,7 @@ namespace DDCCProftaak_Jsie_18_05_18
             if (!isConnected)
             {
                 connectToArduino();
+                CommandNumberJsie = 0;
             }
             else
             {
