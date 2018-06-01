@@ -1,5 +1,3 @@
-#include <SPI.h>
-#include <Controllino.h>
 
 int SwitchCantiLeverB = A11;
 int cantiLeverB = 9;
@@ -13,7 +11,7 @@ int IncomingByte = 0;
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(9600);
+  Serial.begin(74880);
   pinMode(SwitchCantiLeverB, INPUT);
   pinMode(switchHorConv, INPUT);
   pinMode(cantiLeverB, OUTPUT);
