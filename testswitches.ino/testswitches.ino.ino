@@ -173,16 +173,16 @@ void loop() {
 //    }
 //  }
 
-
-  if (test == false)
-  {
-    digitalWrite(armVertUp, HIGH);
-    if (digitalRead(switchVert) == HIGH)
-    {
-      digitalWrite(armVertUp, LOW);
-      test = true;
-    }
-  }
+//
+//  if (test == false)
+//  {
+//    digitalWrite(armVertUp, HIGH);
+//    if (digitalRead(switchVert) == HIGH)
+//    {
+//      digitalWrite(armVertUp, LOW);
+//      test = true;
+//    }
+//  }
 
 
 

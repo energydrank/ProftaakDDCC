@@ -9,11 +9,13 @@ int armVertUp = 7;
 int switchVert = A3;
 bool test = false;
 int IncomingByte = 0;
+int horizontalRack = 4;
+int armVertDown = 6;
 
 
 void setup() {
   // put your setup code here, to run once:
-  Serial.begin(9600);
+  Serial.begin(250000);
   pinMode(SwitchCantiLeverB, INPUT);
   pinMode(switchHorConv, INPUT);
   pinMode(cantiLeverB, OUTPUT);
@@ -32,14 +34,11 @@ void loop() {
     if (test == false)
     {
       digitalWrite(cantiLeverB, HIGH);
-      if (digitalRead(SwitchCantiLeverB) == 1)
+      if (digitalRead(SwitchCantiLeverB) == HIGH)
       {
         digitalWrite(cantiLeverB, LOW);
       }
-      if (digitalRead(switchHorConv) == LOW)
-      {
-        digitalWrite(horizontalConv, HIGH);
-      }
+      digitalWrite(horizontalConv, HIGH);
       if (digitalRead(switchHorConv) == HIGH)
       {
         digitalWrite(horizontalConv, LOW);
@@ -53,4 +52,6 @@ void loop() {
       }
     }
   }
+
+//    digitalWrite(horizontalRack, HIGH);
 }
