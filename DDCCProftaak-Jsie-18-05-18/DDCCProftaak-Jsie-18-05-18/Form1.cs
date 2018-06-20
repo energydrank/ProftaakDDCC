@@ -21,15 +21,15 @@ namespace DDCCProftaak_Jsie_18_05_18
         SerialPort portJsie;
         bool isConnected;
         byte CommandNumberJsie = 0;
-        byte WhitePosition = 0;
-        byte bluePosition = 0;
-        byte redPosition = 0;
-        byte emptyBox1 = 0;
-        byte emptyBox2 = 0;
-        byte emptyBox3 = 0;
-        byte emptyBox4 = 0;
-        byte emptyBox5 = 0;
-        byte emptyBox6 = 0;
+        bool A1 = true;
+        bool A2 = true;
+        bool A3 = true;
+        bool B1 = true;
+        bool B2 = true;
+        bool B3 = true;
+        bool C1 = true;
+        bool C2 = true;
+        bool C3 = true;
 
         public Form1()
         {
@@ -64,7 +64,101 @@ namespace DDCCProftaak_Jsie_18_05_18
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+           
+            if (A1 == true)
+            {
+                lblA1Jsie.Text = "In Stock";
+                lblDelA1Jsie.Text = "Unavailable";
+                btnDelA1Jsie.Enabled = true;
+            }
+            else if (A1 == false)
+            {
+                lblA1Jsie.Text = "Out of Stock";
+                lblDelA1Jsie.Text = "Available";
+                btnDelA1Jsie.Enabled = false;
+            }
+            if (A2 == true)
+            {
+                lblA2Jsie.Text = "In Stock";
+                lblDelA2Jsie.Text = "Unavailable";
+                btnDelA2Jsie.Enabled = true;
+            }
+            else if (A2 == false)
+            {
+                lblA2Jsie.Text = "Out of Stock";
+                lblDelA2Jsie.Text = "Available";
+                btnDelA2Jsie.Enabled = false;
+            }
+            if (A3 == true)
+            {
+                lblA3Jsie.Text = "In Stock";
+                lblDelA3Jsie.Text = "Unavailable";
+            }
+            else if (A3 == false)
+            {
+                lblA3Jsie.Text = "Out of Stock";
+                lblDelA3Jsie.Text = "Available";
+            }
+            if (B1 == true)
+            {
+                lblB1Jsie.Text = "In Stock";
+                lblDelB1Jsie.Text = "Unavailable";
+            }
+            else if (B1 == false)
+            {
+                lblB1Jsie.Text = "Out of Stock";
+                lblDelB1Jsie.Text = "Available";
+            }
+            if (B2 == true)
+            {
+                lblB2Jsie.Text = "In Stock";
+                lblDelB2Jsie.Text = "Unavailable";
+            }
+            else if (B2 == false)
+            {
+                lblB2Jsie.Text = "Out of Stock";
+                lblDelB2Jsie.Text = "Available";
+            }
+            if (B3 == true)
+            {
+                lblB3Jsie.Text = "In Stock";
+                lblDelB3Jsie.Text = "Unavailable";
+            }
+            else if (B3 == false)
+            {
+                lblB3Jsie.Text = "Out of Stock";
+                lblDelB3Jsie.Text = "Available";
+            }
+            if (C1 == true)
+            {
+                lblC1Jsie.Text = "In Stock";
+                lblDelC1Jsie.Text = "Unavailable";
+            }
+            else if (C1 == false)
+            {
+                lblC1Jsie.Text = "Out of Stock";
+                lblDelC1Jsie.Text = "available";
+            }
+            if (C2 == true)
+            {
+                lblC2Jsie.Text = "In Stock";
+                lblDelC2Jsie.Text = "Unavailable";
+            }
+            else if (C2 == false)
+            {
+                lblC2Jsie.Text = "Out of Stock";
+                lblDelC2Jsie.Text = "Available";
+            }
+            if (C3 == true)
+            {
+                lblC3Jsie.Text = "In Stock";
+                lblDelC3Jsie.Text = "Unavailable";
+            }
+            else if (C3 == false)
+            {
+                lblC3Jsie.Text = "Out of Stock";
+                lblDelC3Jsie.Text = "Available";
+            }
         }
 
         private void getAvailableComPorts()
@@ -75,140 +169,205 @@ namespace DDCCProftaak_Jsie_18_05_18
 
         private void connectToArduino()
         {
-            isConnected = true;
-            string selectedPort = cmbComPortsJsie.GetItemText(cmbComPortsJsie.SelectedItem);
-            portJsie = new SerialPort(selectedPort, 250000, Parity.None, 8, StopBits.One);
-            portJsie.Encoding = Encoding.ASCII;
-            portJsie.Open();
-            portJsie.BaseStream.WriteByte(CommandNumberJsie);
-            portJsie.BaseStream.Flush();
-            System.Threading.Thread.Sleep(100);
-            portJsie.Close();
+                isConnected = true;
+                string selectedPort = cmbComPortsJsie.GetItemText(cmbComPortsJsie.SelectedItem);
+                portJsie = new SerialPort(selectedPort, 250000, Parity.None, 8, StopBits.One);
+                portJsie.Encoding = Encoding.ASCII;
+                portJsie.Open();
+                portJsie.BaseStream.WriteByte(CommandNumberJsie);
+                portJsie.BaseStream.Flush();
+                System.Threading.Thread.Sleep(100);
+                portJsie.Close();
+
         }
 
         private void btnA1Jsie_Click(object sender, EventArgs e)
         {
-            CommandNumberJsie = 13;
-            if (!isConnected)
+            if (A1 == true)
             {
-                connectToArduino();
-                CommandNumberJsie = 0;
+
+                CommandNumberJsie = 13;
+                if (!isConnected)
+                {
+                    connectToArduino();
+                    CommandNumberJsie = 0;
+                }
+                else
+                {
+                    CommandNumberJsie = 0;
+                }
             }
-            else
+            else if (A1 == false)
             {
-                CommandNumberJsie = 0;
+                MessageBox.Show("Product Not in stock");
             }
         }
 
         private void btnA2Jsie_Click(object sender, EventArgs e)
         {
-            CommandNumberJsie = 23;
-            if (!isConnected)
+            if (A2 == true)
             {
-                connectToArduino();
-                CommandNumberJsie = 0;
+                CommandNumberJsie = 23;
+                if (!isConnected)
+                {
+                    connectToArduino();
+                    CommandNumberJsie = 0;
+                }
+                else
+                {
+                    CommandNumberJsie = 0;
+                }
             }
-            else
+            else if (A2 == false)
             {
-                CommandNumberJsie = 0;
+                MessageBox.Show("Product Not in stock");
             }
         }
 
         private void btnA3Jsie_Click(object sender, EventArgs e)
         {
-            CommandNumberJsie = 33;
-            if (!isConnected)
+            if (A3 == true)
             {
-                connectToArduino();
-                CommandNumberJsie = 0;
+                CommandNumberJsie = 33;
+                if (!isConnected)
+                {
+                    connectToArduino();
+                    CommandNumberJsie = 0;
+                }
+                else
+                {
+                    CommandNumberJsie = 0;
+                }
             }
-            else
+            else if (A3 == false)
             {
-                CommandNumberJsie = 0;
+                MessageBox.Show("Product Not in stock");
             }
         }
 
         private void btnB1Jsie_Click(object sender, EventArgs e)
         {
-            CommandNumberJsie = 12;
-            if (!isConnected)
+            if (B1 == true)
             {
-                connectToArduino();
-                CommandNumberJsie = 0;
+                CommandNumberJsie = 12;
+                if (!isConnected)
+                {
+                    connectToArduino();
+                    CommandNumberJsie = 0;
+                }
+                else
+                {
+                    CommandNumberJsie = 0;
+                }
             }
-            else
+            else if (B1 == false)
             {
-                CommandNumberJsie = 0;
+                MessageBox.Show("Product Not in stock");
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CommandNumberJsie = 21;
-            if (!isConnected)
+            if (B2 == true)
             {
-                connectToArduino();
-                CommandNumberJsie = 0;
+                CommandNumberJsie = 21;
+                if (!isConnected)
+                {
+                    connectToArduino();
+                    CommandNumberJsie = 0;
+                }
+                else
+                {
+                    CommandNumberJsie = 0;
+                }
             }
-            else
+            else if (B2 == false)
             {
-                CommandNumberJsie = 0;
+                MessageBox.Show("Product Not in stock");
             }
         }
 
         private void btnB3Jsie_Click(object sender, EventArgs e)
         {
-            CommandNumberJsie = 32;
-            if (!isConnected)
+            if (B3 == true)
             {
-                connectToArduino();
-                CommandNumberJsie = 0;
+                CommandNumberJsie = 32;
+                if (!isConnected)
+                {
+                    connectToArduino();
+                    CommandNumberJsie = 0;
+                }
+                else
+                {
+                    CommandNumberJsie = 0;
+                }
             }
-            else
+            else if (B3 == false)
             {
-                CommandNumberJsie = 0;
+                MessageBox.Show("Product Not in stock");
             }
         }
 
         private void btnC1Jsie_Click(object sender, EventArgs e)
         {
-            CommandNumberJsie = 11;
-            if (!isConnected)
+            if (C1 == true)
             {
-                connectToArduino();
-                CommandNumberJsie = 0;
+                CommandNumberJsie = 11;
+                if (!isConnected)
+                {
+                    connectToArduino();
+                    CommandNumberJsie = 0;
+                }
+                else
+                {
+                    CommandNumberJsie = 0;
+                }
             }
-            else
+            else if (C1 == false)
             {
-                CommandNumberJsie = 0;
+                MessageBox.Show("Product Not in stock");
             }
         }
 
         private void btnC2Jsie_Click(object sender, EventArgs e)
         {
-            CommandNumberJsie = 21;
-            if (!isConnected)
+            if (C2 == true)
             {
-                connectToArduino();
-                CommandNumberJsie = 0;
+                CommandNumberJsie = 21;
+                if (!isConnected)
+                {
+                    connectToArduino();
+                    CommandNumberJsie = 0;
+                }
+                else
+                {
+                    CommandNumberJsie = 0;
+                }
             }
-            else
+            else if (C3 == false)
             {
-                CommandNumberJsie = 0;
+                MessageBox.Show("Product Not in stock");
             }
         }
 
         private void btnC3Jsie_Click(object sender, EventArgs e)
         {
-            CommandNumberJsie = 31;
-            if (!isConnected)
+            if (C3 == true)
             {
-                connectToArduino();
-                CommandNumberJsie = 0;
+                CommandNumberJsie = 31;
+                if (!isConnected)
+                {
+                    connectToArduino();
+                    CommandNumberJsie = 0;
+                }
+                else
+                {
+                    CommandNumberJsie = 0;
+                }
             }
-            else
+            else if (C3 == false)
             {
-                CommandNumberJsie = 0;
+                MessageBox.Show("Product Not in stock");
             }
         }
 
@@ -239,6 +398,137 @@ namespace DDCCProftaak_Jsie_18_05_18
         private void btnDeliverJsie_Click(object sender, EventArgs e)
         {
             tcbJsie.SelectedTab = tabDeliverJsie;
+        }
+
+        private void btnDelA1Jsie_Click(object sender, EventArgs e)
+        {
+            CommandNumberJsie = 41;
+            if (!isConnected)
+            {
+                connectToArduino();
+                CommandNumberJsie = 0;
+            }
+            else
+            {
+                CommandNumberJsie = 0;
+            }
+        }
+
+        private void btnDelA2Jsie_Click(object sender, EventArgs e)
+        {
+            CommandNumberJsie = 42;
+            if (!isConnected)
+            {
+                connectToArduino();
+                CommandNumberJsie = 0;
+            }
+            else
+            {
+                CommandNumberJsie = 0;
+            }
+        }
+
+        private void btnDelA3Jsie_Click(object sender, EventArgs e)
+        {
+            CommandNumberJsie = 43;
+            if (!isConnected)
+            {
+                connectToArduino();
+                CommandNumberJsie = 0;
+            }
+            else
+            {
+                CommandNumberJsie = 0;
+            }
+        }
+
+        private void btnDelB3Jsie_Click(object sender, EventArgs e)
+        {
+            CommandNumberJsie = 51;
+            if (!isConnected)
+            {
+                connectToArduino();
+                CommandNumberJsie = 0;
+            }
+            else
+            {
+                CommandNumberJsie = 0;
+            }
+        }
+
+        private void btnDelB2Jsie_Click(object sender, EventArgs e)
+        {
+            CommandNumberJsie = 52;
+            if (!isConnected)
+            {
+                connectToArduino();
+                CommandNumberJsie = 0;
+            }
+            else
+            {
+                CommandNumberJsie = 0;
+            }
+        }
+
+        private void btnDeliB3Jsie_Click(object sender, EventArgs e)
+        {
+            CommandNumberJsie = 53;
+            if (!isConnected)
+            {
+                connectToArduino();
+                CommandNumberJsie = 0;
+            }
+            else
+            {
+                CommandNumberJsie = 0;
+            }
+        }
+
+        private void btnDelC1Jsie_Click(object sender, EventArgs e)
+        {
+            CommandNumberJsie = 61;
+            if (!isConnected)
+            {
+                connectToArduino();
+                CommandNumberJsie = 0;
+            }
+            else
+            {
+                CommandNumberJsie = 0;
+            }
+        }
+
+        private void btnDelC2Jsie_Click(object sender, EventArgs e)
+        {
+            CommandNumberJsie = 62;
+            if (!isConnected)
+            {
+                connectToArduino();
+                CommandNumberJsie = 0;
+            }
+            else
+            {
+                CommandNumberJsie = 0;
+            }
+        }
+
+        private void btnDelC3Jsie_Click(object sender, EventArgs e)
+        {
+            CommandNumberJsie = 63;
+            if (!isConnected)
+            {
+                connectToArduino();
+                CommandNumberJsie = 0;
+            }
+            else
+            {
+                CommandNumberJsie = 0;
+            }
+        }
+
+        private void btnDelMainMenuJsie_Click(object sender, EventArgs e)
+        {
+            tcbJsie.SelectedTab = tabMainMenuJsie;
         }
     }
 }

@@ -18,3 +18,13 @@ D:\ProftaakDDCC\DDCCProftaak-Jsie-18-05-18\DDCCProftaak-Jsie-18-05-18\obj\Debug\
 D:\ProftaakDDCC\DDCCProftaak-Jsie-18-05-18\DDCCProftaak-Jsie-18-05-18\obj\Debug\DDCCProftaak-Jsie-18-05-18.csproj.CoreCompileInputs.cache
 D:\ProftaakDDCC\DDCCProftaak-Jsie-18-05-18\DDCCProftaak-Jsie-18-05-18\obj\Debug\DDCCProftaak-Jsie-18-05-18.exe
 D:\ProftaakDDCC\DDCCProftaak-Jsie-18-05-18\DDCCProftaak-Jsie-18-05-18\obj\Debug\DDCCProftaak-Jsie-18-05-18.pdb
+C:\Users\Jesse Siersema\Desktop\Proftaak\ProftaakDDCC\DDCCProftaak-Jsie-18-05-18\DDCCProftaak-Jsie-18-05-18\bin\Debug\DDCCProftaak-Jsie-18-05-18.exe.config
+C:\Users\Jesse Siersema\Desktop\Proftaak\ProftaakDDCC\DDCCProftaak-Jsie-18-05-18\DDCCProftaak-Jsie-18-05-18\bin\Debug\DDCCProftaak-Jsie-18-05-18.exe
+C:\Users\Jesse Siersema\Desktop\Proftaak\ProftaakDDCC\DDCCProftaak-Jsie-18-05-18\DDCCProftaak-Jsie-18-05-18\bin\Debug\DDCCProftaak-Jsie-18-05-18.pdb
+C:\Users\Jesse Siersema\Desktop\Proftaak\ProftaakDDCC\DDCCProftaak-Jsie-18-05-18\DDCCProftaak-Jsie-18-05-18\obj\Debug\DDCCProftaak-Jsie-18-05-18.csprojAssemblyReference.cache
+C:\Users\Jesse Siersema\Desktop\Proftaak\ProftaakDDCC\DDCCProftaak-Jsie-18-05-18\DDCCProftaak-Jsie-18-05-18\obj\Debug\DDCCProftaak_Jsie_18_05_18.Form1.resources
+C:\Users\Jesse Siersema\Desktop\Proftaak\ProftaakDDCC\DDCCProftaak-Jsie-18-05-18\DDCCProftaak-Jsie-18-05-18\obj\Debug\DDCCProftaak_Jsie_18_05_18.Properties.Resources.resources
+C:\Users\Jesse Siersema\Desktop\Proftaak\ProftaakDDCC\DDCCProftaak-Jsie-18-05-18\DDCCProftaak-Jsie-18-05-18\obj\Debug\DDCCProftaak-Jsie-18-05-18.csproj.GenerateResource.cache
+C:\Users\Jesse Siersema\Desktop\Proftaak\ProftaakDDCC\DDCCProftaak-Jsie-18-05-18\DDCCProftaak-Jsie-18-05-18\obj\Debug\DDCCProftaak-Jsie-18-05-18.csproj.CoreCompileInputs.cache
+C:\Users\Jesse Siersema\Desktop\Proftaak\ProftaakDDCC\DDCCProftaak-Jsie-18-05-18\DDCCProftaak-Jsie-18-05-18\obj\Debug\DDCCProftaak-Jsie-18-05-18.exe
+C:\Users\Jesse Siersema\Desktop\Proftaak\ProftaakDDCC\DDCCProftaak-Jsie-18-05-18\DDCCProftaak-Jsie-18-05-18\obj\Debug\DDCCProftaak-Jsie-18-05-18.pdb
